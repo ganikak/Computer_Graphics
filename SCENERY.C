@@ -1,0 +1,91 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
+void main()
+{
+ int gd=DETECT,gm;
+ int i;
+ initgraph(&gd,&gm,"C:\\TurboC3\\BGI");
+ for(i=0;i<=200;i++)
+{
+//AEROPLANE
+line(600-i,40,400-i,40);
+line(600-i,100,400-i,100);
+line(600-i,40,620-i,7);
+line(600-i,100,620-i,50);
+line(620-i,7,620-i,50);
+line(480-i,40,550-i,12);
+line(520-i,40,550-i,12);
+line(480-i,80,550-i,112);
+line(520-i,80,550-i,112);
+line(480-i,80,520-i,80);
+rectangle(400-i,45,410-i,55);
+rectangle(420-i,45,430-i,55);
+rectangle(440-i,45,450-i,55);
+rectangle(460-i,45,470-i,55);
+rectangle(480-i,45,490-i,55);
+rectangle(500-i,45,510-i,55);
+rectangle(520-i,45,530-i,55);
+rectangle(540-i,45,550-i,55);
+rectangle(560-i,45,570-i,55);
+rectangle(580-i,45,590-i,55);
+ellipse(400-i,70,90,270,40,30);
+ellipse(390-i,55,90,180,10,10);
+line(390-i,45,390-i,55);
+line(380-i,55,390-i,55);
+//MOUNTAINS
+setcolor(BROWN);
+setfillstyle(SOLID_FILL,BROWN);
+line(0,220,600,220);
+line(0,220,50,150);
+line(50,150,100,220);
+floodfill(50,155,BROWN);
+line(100,220,150,150);
+line(150,150,200,220);
+floodfill(150,155,BROWN);
+line(200,220,250,150);
+line(250,150,300,220);
+floodfill(250,155,BROWN);
+line(300,220,350,150);
+line(350,150,400,220);
+floodfill(350,155,BROWN);
+line(400,220,450,150);
+line(450,150,500,220);
+floodfill(450,155,BROWN);
+line(500,220,550,150);
+line(550,150,600,220);
+floodfill(550,155,BROWN);
+//LAND
+setcolor(GREEN);
+rectangle(0,220,600,250);
+setfillstyle(SOLID_FILL,GREEN);
+floodfill(11,249,GREEN);
+//WATER
+setcolor(BLUE);
+rectangle(0,250,600,450);
+setfillstyle(SOLID_FILL,BLUE);
+floodfill(11,449,BLUE);
+//FISH
+setcolor(YELLOW);
+ellipse(200+i,300,0,360,70,25);
+setfillstyle(SOLID_FILL,YELLOW);
+floodfill(200+i,300,YELLOW);
+setcolor(3);
+circle(250+i,295,5);
+setfillstyle(SOLID_FILL,3);
+floodfill(250+i,295,3);
+setcolor(5);
+ellipse(180+i,300,320,400,20,40);
+ellipse(160+i,300,325,395,20,40);
+ellipse(140+i,300,330,390,20,40);
+ellipse(250+i,300,100,260,20,20);
+line(80+i,280,134+i,290);
+line(80+i,320,134+i,310);
+line(80+i,280,80+i,320);
+  delay(150);
+  cleardevice();
+  }
+ getch();
+}
