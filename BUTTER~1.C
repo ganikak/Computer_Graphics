@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
+
+void main()
+{
+   int gd=DETECT,gm;
+   int i;
+   initgraph(&gd,&gm,"C:\\TurboC3\\BGI");
+  for(i=10;i<=600;i=i+50)
+  {
+  //butterfly1
+  setcolor(14);
+  circle(400,320-i,20);
+  setfillstyle(SOLID_FILL,14);
+  floodfill(400,320-i,14);
+  setcolor(3);
+  setfillstyle(SOLID_FILL,3);
+  circle(390,320-i,2);
+  floodfill(390,320-i,3);
+  circle(410,320-i,3);
+  floodfill(410,320-i,3);
+  setcolor(5);
+  arc(454,300-i,90,180,50);
+  arc(348,300-i,0,90,50);
+  circle(454,255-i,5);
+  circle(348,255-i,5);
+  ellipse(400,400-i,0,360,20,60);
+  setfillstyle(SOLID_FILL,5);
+  floodfill(400,400-i,5);
+  arc(365,360-i,0,230,20);
+  arc(365,410-i,110,300,40);
+  arc(435,360-i,310,180,20);
+  arc(435,410-i,240,70,40);
+  //butterfly2
+  setcolor(14);
+  setfillstyle(SOLID_FILL,14);
+  circle(100,70+i,20);
+  floodfill(100,70+i,14);
+  setcolor(3);
+  setfillstyle(SOLID_FILL,3);
+  circle(90,70+i,2);
+  floodfill(90,70+i,3);
+  circle(110,70+i,2);
+  floodfill(110,70+i,3);
+  setcolor(5);
+  arc(154,50+i,90,180,50);
+  arc(48,50+i,0,90,50);
+  circle(154,5+i,5);
+  circle(48,5+i,5);
+  ellipse(100,150+i,0,360,20,60);
+  setfillstyle(SOLID_FILL,5);
+  floodfill(100,150+i,5);
+  arc(65,110+i,0,230,20);
+  arc(65,160+i,110,300,40);
+  arc(135,110+i,310,180,20);
+  arc(135,160+i,240,70,40);
+  delay(200);
+  cleardevice();}
+
+getch();
+closegraph();
+}
